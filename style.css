@@ -1,0 +1,262 @@
+.navbar-brand img {
+  width: 150px;
+  height: auto;
+}
+
+.navbar {
+  border-bottom: 1px solid #f38249;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav .nav-item a {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  color: #1b1919;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar-nav .nav-item a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: #f15746;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-item a:hover::before {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-item a:hover {
+  color: #f15746;
+}
+
+.navbar-nav .nav-item a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #f15746;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar-nav .nav-item a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.jumbotron {
+  padding: 5% 0;
+  background-color: #f15746;
+  margin-top: 4.3rem;
+}
+
+.container .img-jumbotron {
+  height: 300px;
+  object-fit: cover;
+  padding: 15px;
+  margin: 15px;
+}
+
+.row.align-items-center {
+  justify-content: flex-end;
+}
+
+.col-md-8.col-12 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-desc span,
+.col-lg-6 span,
+.menu span,
+.kontak-kami span {
+  color: #f5ff41cc;
+}
+
+.hero-desc h1,
+.col-lg-6 h1,
+.menu h1,
+.kontak-kami h1 {
+  font-size: 2.5rem;
+  line-height: 120%;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  color: #f8ebeb;
+}
+
+.hero-desc p,
+.col-lg-6 p,
+.kontak-kami .judul {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 200;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.tentang-kami,
+.menu,
+.kontak-kami {
+  background-color: #f15746;
+  padding: 8rem 7% 1.4rem;
+}
+
+.col-lg-6 h1,
+.menu h1,
+.kontak-kami h1 {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.col-lg-6,
+.menu,
+.form-container,
+.kontak-kami {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.col-lg-6 h1::after,
+.menu h1::after,
+.kontak-kami h1::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: #cef847;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card .star-full {
+  fill: #f15746;
+}
+
+.kontak-kami {
+  background-color: #f15746;
+  padding: 50px 0;
+}
+
+.kontak-kami p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  padding: 30px;
+  background-color: #ecf847;
+}
+
+.form-container form {
+  margin-top: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #888;
+}
+
+.input-group input {
+  padding-left: 40px;
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f15746;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d14838;
+}
+
+/* Tambahan CSS untuk tata letak responsif */
+@media (max-width: 767px) {
+  .kontak-kami .row {
+    flex-direction: column;
+  }
+
+  .kontak-kami .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+footer {
+  background-color: #ecf847;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.col-md-4 .social-media {
+  color: #fff;
+  margin: 1rem;
+}
+
+.social-media li a {
+  text-decoration: none;
+  color: #f15746;
+}
+
+footer .social-media a:hover {
+  color: #848181;
+}
+
+.col-md-4 {
+  color: #f15746;
+}
